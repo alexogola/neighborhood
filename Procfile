@@ -1,1 +1,1 @@
-web: gunicorn neighborhood.wsgi
+web: gunicorn hoodwatch.wsgi

@@ -23,7 +23,7 @@ def signup(request):
         form = SignupForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.is_active = False
+            user.is_active = True
             user.save()
             current_site = get_current_site(request)
             mail_subject = 'Activate your neighborhood account.'
@@ -37,8 +37,9 @@ def signup(request):
             email = EmailMessage(
                         mail_subject, message, to=[to_email]
             )
-            email.send()
-            return HttpResponse('Please confirm your email address to complete the registration')
+            # email.send()
+            login(request, user)
+            return redirect('/')
     else:
         form = SignupForm()
     return render(request, 'signup.html', {'form': form})
@@ -54,10 +55,12 @@ def activate(request, uidb64, token):
         user.is_active = True
         user.save()
         login(request, user)
-        # return redirect('home')
-        return HttpResponse('Thank you for your email confirmation. Now you can now <a href="/accounts/login/">Login</a> your account.')
+        return redirect('/')
     else:
-        return HttpResponse('Activation link is invalid!')
+        user.is_active = True
+        user.save()
+        login(request, user)
+        return redirect('/')
 
 # INDEX OF neighborhood
 def index(request):
@@ -77,13 +80,13 @@ def edit_profile(request):
     current_user = request.user
     profile = Profile.objects.get(user=current_user.id)
     if request.method == 'POST':
-        signup_form = EditForm(request.POST, request.FILES,instance=request.user.profile) 
+        signup_form = EditForm(request.POST, request.FILES,instance=request.user.profile)
         if signup_form.is_valid():
             signup_form.save()
             return redirect('profile')
     else:
-        signup_form =EditForm() 
-        
+        signup_form =EditForm()
+
     return render(request, 'profile/edit_profile.html', {"date": date, "form":signup_form,"profile":profile})
 
 
@@ -94,7 +97,7 @@ def search_results(request):
         searched_businesses = Business.objects.filter(name=search_term)
         message = f"{search_term}"
         profiles=  Profile.objects.all( )
-      
+
         return render(request, 'search.html',{"message":message,"business": searched_businesses,'profiles':profiles})
 
     else:

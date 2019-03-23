@@ -1,4 +1,4 @@
-## hoodwatch
+## Neighborhood
 
 This is an application that allows users to join and create Neighbourhoods
 
@@ -11,12 +11,12 @@ Alex Ogola
 This application allows its users to do the following
 
 * Sign in with the application to start using.
-* Set up a profile about me and a general location and my hoodwatch name.
-* Find a list of different businesses in my hoodwatch.
-* Find Contact Information for the health department and Police authorities near my hoodwatch.
-* Create Posts that will be visible to everyone in my hoodwatch.
-* Change My hoodwatch when I decide to move out.
-* Only view details of a single hoodwatch.
+* Set up a profile about me and a general location and my neighborhood name.
+* Find a list of different businesses in my neighborhood.
+* Find Contact Information for the health department and Police authorities near my neighborhood.
+* Create Posts that will be visible to everyone in my neighborhood.
+* Change My neighborhood when I decide to move out.
+* Only view details of a single neighborhood.
 
 #### Gallery Categories
 * Art

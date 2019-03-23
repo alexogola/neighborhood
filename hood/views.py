@@ -26,7 +26,7 @@ def signup(request):
             user.is_active = False
             user.save()
             current_site = get_current_site(request)
-            mail_subject = 'Activate your hoodwatch account.'
+            mail_subject = 'Activate your neighborhood account.'
             message = render_to_string('acc_active_email.html', {
                 'user': user,
                 'domain': current_site.domain,
@@ -59,7 +59,7 @@ def activate(request, uidb64, token):
     else:
         return HttpResponse('Activation link is invalid!')
 
-# INDEX OF hoodwatch
+# INDEX OF neighborhood
 def index(request):
     date = dt.date.today()
     hoods = Neighbourhood.objects.all()

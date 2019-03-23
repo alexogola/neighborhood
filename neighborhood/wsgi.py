@@ -1,5 +1,5 @@
 """
-WSGI config for hoodwatch project.
+WSGI config for neighborhood project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hoodwatch.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "neighborhood.settings")
 
 application = get_wsgi_application()

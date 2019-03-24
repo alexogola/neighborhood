@@ -28,23 +28,23 @@ This application allows its users to do the following
 * $ source virtual/bin/activate
 * Install all the necessary requirements by running pip install -r requirements.txt (Python 3).
 
-#create a database
+## create a database
 
 * psql
 * CREATE DATABASE neighborhood
 * connect to the database \c neighborhood
 * check if tables have been created \dt
 
-#Run migrations
+## Run migrations
 
 * python3.6 manage.py migrate
 * python3.6 manage.py makemigrations hood
 
-#Running the app
+## Running the app
 
 * python3.6 manage.py runserver
 
-#testing
+## testing
 
 * python3.6 manage.py test hood
 
@@ -67,7 +67,7 @@ This application allows its users to do the following
 | Create neighbourhood | Click "create a hood" button  |  User is directed to a page where they can create a new neighborhood |
 
 
-# License
+## License
 
 * MIT License
 

@@ -20,9 +20,9 @@
 
 
 {% block content %}
-<body style="background-color: rgb(101, 124, 126);">
+<body>
 
-<div style="color:antiquewhite;" class="container">
+<div style="padding-top: 5%;" class="container">
     <div class="coll">
         <div class="row">
             <div class="col-md-6">
@@ -31,7 +31,7 @@
             </div>
             <div class="col-md-6">
                 <br>
-               
+
                 {{post.admin.username}} <small>(admin)</small>
             </div>
         </div>
@@ -45,24 +45,24 @@
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                 <br>
-                <a href="/hoods/new/post/{{post.id}}"><button class="btn btn-lignt"><i class="large material-icons">add_box</i>Add Post</button></a> 
+                <a href="/hoods/new/post/{{post.id}}"><button class="btn btn-lignt"><i class="large material-icons">add_box</i>Add Post</button></a>
                 <br>
                 <br>
                 <h3>Posts</h3>
                 <div class="row">
                     <div class="col-md-6">
                             {% for brushs_item in brushs%}
-                    
+
                             <div style="" class="card">
                                 <div style="color:antiquewhite; background-color:rgb(10, 10, 10);" class="card-header">
                                     <p>{{brushs_item.post}}</p>
                                 </div>
                                 <div style="text-align:center; background-color:rgb(10, 10, 10);" class="card-image">
-                                    
-                                        
-                                    
+
+
+
                                 </div>
-                                <div style="background-color:rgb(10, 10, 10);" class="card-footer"> 
+                                <div style="background-color:rgb(10, 10, 10);" class="card-footer">
                                     <a href="#"> <button class="btn btn-outline-primary btn-sm">like</button> </a>
                                 </div>
                             </div>
@@ -71,15 +71,15 @@
                     {% endfor%}
                     </div>
                     <div class="col-md-6">
-                        
+
                     </div>
                 </div>
-                    
-                        
-                
-                
-            
-            
+
+
+
+
+
+
             </div>
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"> <br>
                     <a href="/hoods/new/business/{{post.id}}"><button class="btn btn-lignt"><i class="large material-icons">add_circle</i>Add Business</button></a>
@@ -93,10 +93,10 @@
                                             </div>
                                             <div style="text-align:center; background-color:rgb(10, 10, 10);" class="card-body">
                                               <img src="{{business_item.image.url}}" alt="" height="250px" width="310px">
-                                              
+
                                         </div>
-                                        
-                                        <div style="background-color:rgb(10, 10, 10);" class="card-footer"> 
+
+                                        <div style="background-color:rgb(10, 10, 10);" class="card-footer">
                                             <small>Phone no. <strong>{{business_item.phone_number}}</strong></small>
                                             <br>
                                             <small>Category: <strong>{{business_item.category}}</strong></small>
@@ -104,17 +104,17 @@
                                     </div><br>
                             <br>
                             </div>
-                            
-                                
+
+
                         {% endfor%}
                     </div>
             </div>
         </div>
-             
+
     </div>
-    
+
 </div>
-  
+
    {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   {% bootstrap_javascript %}

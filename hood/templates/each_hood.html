@@ -54,16 +54,16 @@
                             {% for brushs_item in brushs%}
 
                             <div style="" class="card">
-                                <div style="color:antiquewhite; background-color:rgb(10, 10, 10);" class="card-header">
+                                <div class="card-header">
                                     <p>{{brushs_item.post}}</p>
                                 </div>
-                                <div style="text-align:center; background-color:rgb(10, 10, 10);" class="card-image">
+                                <div style="text-align:center;" class="card-image">
 
 
 
                                 </div>
-                                <div style="background-color:rgb(10, 10, 10);" class="card-footer">
-                                    <a href="#"> <button class="btn btn-outline-primary btn-sm">like</button> </a>
+                                <div class="card-footer">
+                                    <a href="#"> <button class="btn btn-warning btn-sm">like</button> </a>
                                 </div>
                             </div>
                             <br>
@@ -76,10 +76,6 @@
                 </div>
 
 
-
-
-
-
             </div>
             <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"> <br>
                     <a href="/hoods/new/business/{{post.id}}"><button class="btn btn-lignt"><i class="large material-icons">add_circle</i>Add Business</button></a>
@@ -88,15 +84,15 @@
                             {% for business_item in business%}
                             <div class="col-md-4">
                                     <div style="" class="card">
-                                            <div style="color:antiquewhite; background-color:rgb(10, 10, 10);" class="card-header">
+                                            <div class="card-header">
                                                 <h5>{{business_item.name}}</h5>
                                             </div>
-                                            <div style="text-align:center; background-color:rgb(10, 10, 10);" class="card-body">
+                                            <div style="text-align:center;" class="card-body">
                                               <img src="{{business_item.image.url}}" alt="" height="250px" width="310px">
 
                                         </div>
 
-                                        <div style="background-color:rgb(10, 10, 10);" class="card-footer">
+                                        <div class="card-footer">
                                             <small>Phone no. <strong>{{business_item.phone_number}}</strong></small>
                                             <br>
                                             <small>Category: <strong>{{business_item.category}}</strong></small>

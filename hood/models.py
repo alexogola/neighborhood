@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from django.core.validators import MinValueValidator,MaxValueValidator
 
-# Create your models here.        
+# Create your models here.
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE,related_name='profile')
     first_name = models.CharField(max_length=30)
@@ -42,7 +42,7 @@ class Neighbourhood(models.Model):
     name = models.CharField(max_length = 300)
     image = models.ImageField(upload_to='images/', null=True)
     admin = models.ForeignKey(Profile, related_name='hoods', null=True)
-    description = models.CharField(max_length = 300,default='My hood!!!')
+    description = models.CharField(max_length = 300,default='Neighborhood description')
 
 class Business(models.Model):
     name = models.CharField(max_length=30)
@@ -57,7 +57,7 @@ class Business(models.Model):
     def search_by_name(cls,search_term):
         business = cls.objects.filter(title__icontains=search_term)
         return business
-    
+
 
 
 class Post(models.Model):

@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='neighbourhood',
             name='description',
-            field=models.CharField(default='My hood!!!', max_length=300),
+            field=models.CharField(default='Neighborhood description', max_length=300),
         ),
     ]

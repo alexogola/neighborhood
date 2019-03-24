@@ -28,7 +28,7 @@ This application allows its users to do the following
 * $ source virtual/bin/activate
 * Install all the necessary requirements by running pip install -r requirements.txt (Python 3).
 
-## create a database
+## Create a database
 
 * psql
 * CREATE DATABASE neighborhood
@@ -44,12 +44,12 @@ This application allows its users to do the following
 
 * python3.6 manage.py runserver
 
-## testing
+## Testing
 
 * python3.6 manage.py test hood
 
 
-# Technologies Used
+## Technologies Used
 
 #### This project uses major technologies which are :
 * HTML5

@@ -10,7 +10,7 @@
     <div class="row">
         {% for hood in hoods%}
             <div class="col-md-4 col-lg-4 col-sm-6 ">
-                <div class="card border-primary">
+                <div class="card border-warning">
                     <div style="text-align:center; color:#000000;" class="card-header">
                         <h5>{{ hood.name}}</h5>
                     </div>
@@ -20,7 +20,7 @@
 
                     </div>
                     <div class="card-footer">
-                        <a href="/hoods/{{ hood.id}}"> <button class="btn btn-outline-warning btn-sm">Join Hood &#8594;</button> </a>
+                        <a href="/hoods/{{ hood.id}}"> <button class="btn btn-warning btn-sm">Join Hood &#8594;</button> </a>
                     </div>
                 </div>
                 <br>

@@ -21,8 +21,8 @@
 
 {% block content %}
 
-<body style="background-color: rgb(101, 124, 126);">
-<div class="container">
+<body>
+<div class="container" style="padding-top: 5%;">
     <div class="row">
         <div class="col-md-2">
 
@@ -35,7 +35,7 @@
                         <div class="card-body">
                                 <form  action="/hoods/new/post/{{hood.id}}" method="post" enctype="multipart/form-data">
                                     {%csrf_token%}
-                                    
+
                                     {% bootstrap_form form%}
                                     <input type="submit" class="btn btn-warning btn-sm" value="Post">
                                 </form>
@@ -46,9 +46,9 @@
 
         </div>
     </div>
-    
+
 </div>
-  
+
 
    {% block scripts %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
